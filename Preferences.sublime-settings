@@ -1,0 +1,15 @@
+// Settings in here override those in "Default/Preferences.sublime-settings",
+// and are overridden in turn by syntax-specific settings.
+{
+	"translate_tabs_to_spaces": true,
+	"font_size": 15,
+	"font_face": "Fira Code",
+	"ignored_packages": [
+	],
+	"vintage_start_in_command_mode": true,
+	"auto_complete_when_likely": false,
+	"auto_complete_use_index": false,
+	"auto_complete_preserve_order": "none",
+	"theme": "Material-Theme-Palenight.sublime-theme",
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Palenight.tmTheme",
+}

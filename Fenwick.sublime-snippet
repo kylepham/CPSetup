@@ -1,0 +1,29 @@
+<snippet>
+    <content><![CDATA[
+void update(vector<int> &bit, int from, int to)
+{
+    // TODO: type check all variables
+    if (from >= to)
+        for (int i = from; i >= to; i -= i&(-i))
+            bit[i]++;
+    else
+        for (int i = from; i <= to; i += i&(-i))
+            bit[i]++;
+}
+
+ll get(vector<int> &bit, int from, int to)
+{
+    // TODO: type check all variables
+    ll ans = 0;
+    if (from >= to)
+        for (int i = from; i >= to; i -= i&(-i))
+            ans += bit[i];
+    else
+        for (int i = from; i <= to; i += i&(-i))
+            ans += bit[i];
+    return ans;
+}
+]]></content>
+    <tabTrigger>fw</tabTrigger>
+    <scope>source.c++</scope>
+</snippet>

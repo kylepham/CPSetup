@@ -1,0 +1,61 @@
+<!--CP Skeleton-->
+<snippet>
+    <content><![CDATA[
+#include <algorithm>
+#include <bitset>
+#include <deque>
+#include <functional>
+#include <iostream>
+#include <iterator>
+#include <limits>
+#include <locale>
+#include <math.h>
+#include <map>
+#include <numeric>
+#include <queue>
+#include <set>
+#include <sstream>
+#include <stack>
+#include <string>
+#include <utility>
+#include <vector>
+
+#define     ii              pair<int, int>
+#define     ll              long long
+#define     mp              make_pair
+#define     endl            "\n"
+
+using namespace std;
+
+template<class Fun> class y_combinator_result {
+    Fun fun_;
+public:
+    template<class T> explicit y_combinator_result(T &&fun): fun_(std::forward<T>(fun)) {}
+    template<class ...Args> decltype(auto) operator()(Args &&...args) { return fun_(std::ref(*this), std::forward<Args>(args)...); }
+};
+template<class Fun> decltype(auto) y_combinator(Fun &&fun) { return y_combinator_result<std::decay_t<Fun>>(std::forward<Fun>(fun)); }
+
+const int maxN = 1<<19;
+const int oo = 1e9+7;
+ 
+void solve()
+{
+    // main function goes here
+    // check testcases?
+    // check bounds (0- or 1-indexed?)
+    $1
+}
+ 
+int main()
+{
+    ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+
+    int testcases;
+    cin >> testcases;
+    while (testcases--)
+        solve();
+}
+]]></content>
+    <tabTrigger>cp</tabTrigger>
+    <scope>source.c++</scope>
+</snippet>

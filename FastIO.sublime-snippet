@@ -1,0 +1,19 @@
+<snippet>
+    <content><![CDATA[
+void read(int &n)
+{
+    int c = getchar();
+    bool negative = false;
+    for(; c < '0' || c > '9'; c = getchar()) if (c == '-') negative = true;
+    n = 0;
+    while (c >= '0' && c <= '9')
+    {
+        n = n * 10 + c - '0';
+        c = getchar();
+    }
+    if (negative) n *= -1;
+}
+]]></content>
+    <tabTrigger>fastio</tabTrigger>
+    <scope>source.c++</scope>
+</snippet>
